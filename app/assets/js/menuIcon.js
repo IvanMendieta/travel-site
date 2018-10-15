@@ -11,7 +11,7 @@ document.querySelector('.site-header__menu-icon').addEventListener('click', func
     menuBackground.classList.toggle('site-header--background');
 
   //grabing the site header menu icon and apply a new style. to close and open
-  //try the other method with if else not contain or remove but pure toggle 
+  //try the other method with if else not contain or remove but pure toggle
 
   var menuIcon = document.querySelector('.site-header__menu-icon');
     if (menuIcon.classList.contains('site-header__menu-icon--close-x')) {
