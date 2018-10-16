@@ -29,8 +29,13 @@ gulp.task('watch', function(){
   watch('./app/assets/js/**/*.js', function(){
     gulp.start('RevealScrollDev');
   });
+
   watch('./app/assets/js/**/*.js', function(){
     gulp.start('StickyHeaderDev');
+  });
+
+  watch('./app/assets/js/**/*.js', function(){
+    gulp.start('scrollBtn');
   });
 
 });
@@ -47,6 +52,11 @@ gulp.task('RevealScrollDev', function(){
 
 gulp.task('StickyHeaderDev', function(){
   return gulp.src('./app/assets/js/StickyHeader.js')
+    .pipe(browserSync.stream());
+});
+
+gulp.task('scrollBtn', function(){
+  return gulp.src('./app/assets/js/scrollBtn.js')
     .pipe(browserSync.stream());
 });
 
