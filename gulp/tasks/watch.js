@@ -26,10 +26,19 @@ gulp.task('watch', function(){
     gulp.start('jsDev');
   });
 
+  watch('./app/assets/js/**/*.js', function(){
+    gulp.start('RevealScrollDev');
+  });
+
 });
 
 gulp.task('jsDev', function(){
   return gulp.src('./app/assets/js/menuIcon.js')
+    .pipe(browserSync.stream());
+});
+
+gulp.task('RevealScrollDev', function(){
+  return gulp.src('./app/assets/js/RevealOnScroll.js')
     .pipe(browserSync.stream());
 });
 
