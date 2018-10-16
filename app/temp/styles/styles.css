@@ -440,8 +440,17 @@ a{
   text-decoration: none;
   padding: .75rem 1.2rem;
   display: inline-block;
+  transition: background-color all .3s ease-out;
 
 }
+
+/*** if screen is larger than 800 do this ***/
+
+@media (min-width: 800px){
+    .btn--background{
+      background-color: #d59541;
+    }
+  }
 
 .btn--orange{
     background-color: #d59541;
@@ -999,10 +1008,15 @@ insted edit fulp templates sprite
 @media (min-width: 800px){
 
 .site-header{
+    position: fixed;
     background-color: rgba(47,85,114, .3)
 
 
 }
+
+    .site-header--dark{
+      background-color: rgba(23, 51, 72, .85);
+    }
   }
 
 /*** if screen is larger than 800 do this ***/
@@ -1020,6 +1034,9 @@ insted edit fulp templates sprite
     left: 50%;
     -webkit-transform: translateX(-50%) scale(.8);
             transform: translateX(-50%) scale(.8);
+    transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
     background-color: #2f5572;
@@ -1035,6 +1052,11 @@ insted edit fulp templates sprite
       -webkit-transform: translateX(0);
               transform: translateX(0)
   }
+
+      .site-header--dark .site-header__logo {
+        -webkit-transform: scale(.57);
+                transform: scale(.57);
+      }
   }
 
 .site-header__logo__graphic{

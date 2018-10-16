@@ -29,6 +29,9 @@ gulp.task('watch', function(){
   watch('./app/assets/js/**/*.js', function(){
     gulp.start('RevealScrollDev');
   });
+  watch('./app/assets/js/**/*.js', function(){
+    gulp.start('StickyHeaderDev');
+  });
 
 });
 
@@ -39,6 +42,11 @@ gulp.task('jsDev', function(){
 
 gulp.task('RevealScrollDev', function(){
   return gulp.src('./app/assets/js/RevealOnScroll.js')
+    .pipe(browserSync.stream());
+});
+
+gulp.task('StickyHeaderDev', function(){
+  return gulp.src('./app/assets/js/StickyHeader.js')
     .pipe(browserSync.stream());
 });
 

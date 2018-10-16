@@ -7,7 +7,7 @@ var featureItem = document.getElementsByClassName('feature-item');
 function scrollItems() {
 
     if( window.pageYOffset > 1730 ) {
-      console.log(window.pageYOffset);
+      // console.log(window.pageYOffset);
        for(var i = 0; i < featureItem.length; i++){
         featureItem[i].classList.add("hide-items--visible-items");
       }
@@ -29,7 +29,7 @@ var testimonial = document.getElementsByClassName('testimonial');
   function scrollTestimonials() {
 
       if( window.pageYOffset > 2814 ) {
-        console.log(window.pageYOffset);
+        // console.log(window.pageYOffset);
          for(var i = 0; i < testimonial.length; i++){
           testimonial[i].classList.add("hide-testimonial--visible-testimonial");
         }
