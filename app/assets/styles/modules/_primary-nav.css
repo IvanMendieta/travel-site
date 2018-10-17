@@ -1,7 +1,11 @@
 .primary-nav{
   padding-top: 10px;
+
   @mixin atMedium{
     padding-top: 0;
+    &--fontChange{
+        color: #d59541 !important;
+    }
   }
   &--pull-right{
 
@@ -45,6 +49,8 @@
       padding: 12px 0;
       font-size: 1rem;
       background-color: transparent;
+      transition: all .3s ease-out;
     }
   }
+
 }

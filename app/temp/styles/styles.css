@@ -995,8 +995,6 @@ insted edit fulp templates sprite
   width: 100%;
   z-index: 2;
   transition: background-color  .3s ease-out;
-
-
 }
 
 .site-header--background{
@@ -1010,8 +1008,6 @@ insted edit fulp templates sprite
 .site-header{
     position: fixed;
     background-color: rgba(47,85,114, .3)
-
-
 }
 
     .site-header--dark{
@@ -1179,6 +1175,7 @@ insted edit fulp templates sprite
 
 .primary-nav{
   padding-top: 10px;
+
 }
 
 /*** if screen is larger than 800 do this ***/
@@ -1187,7 +1184,11 @@ insted edit fulp templates sprite
 
 .primary-nav{
     padding-top: 0
+
 }
+    .primary-nav--fontChange{
+        color: #d59541 !important;
+    }
   }
 
 /*** if screen is larger than 800 do this ***/
@@ -1257,7 +1258,8 @@ insted edit fulp templates sprite
 .primary-nav a{
       padding: 12px 0;
       font-size: 1rem;
-      background-color: transparent
+      background-color: transparent;
+      transition: all .3s ease-out
   }
   }
 
