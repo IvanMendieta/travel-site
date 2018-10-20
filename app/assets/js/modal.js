@@ -16,7 +16,14 @@ var openModal = document.getElementsByClassName('btnModalOPen');
       openModal[i].addEventListener('click', OpenCloseModal);
   }
 
+//function for scape key to press to make sure the modal contact is close
+document.addEventListener('keyup', function(e){
 
+  if( e.keyCode == 27 ){
+    OpenCloseModal(e);
+  }
+
+});
 
   // method 2
   // var openModal = document.getElementsByClassName('btnModalOPen');
