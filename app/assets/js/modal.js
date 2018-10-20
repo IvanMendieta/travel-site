@@ -10,7 +10,7 @@ function OpenCloseModal(e){
       modal.classList.add('modal__modalOpen');
     }
 };
-
+//adding addEventListener to all bts when click on them to show the modal contact
 var openModal = document.getElementsByClassName('btnModalOPen');
   for( var i = 0; i < openModal.length; i++ ){
       openModal[i].addEventListener('click', OpenCloseModal);
@@ -20,7 +20,8 @@ var openModal = document.getElementsByClassName('btnModalOPen');
 document.addEventListener('keyup', function(e){
 
   if( e.keyCode == 27 ){
-    OpenCloseModal(e);
+      //calling the function to close the modal
+      OpenCloseModal(e);
   }
 
 });
