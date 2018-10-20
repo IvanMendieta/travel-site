@@ -5,6 +5,12 @@ document.querySelector('.site-header__menu-icon').addEventListener('click', func
      small screens */
   var menu = document.querySelector('.site-header__menu-content');
     menu.classList.toggle('site-header--small');
+    // if (menu.classList.contains('site-header--small')) {
+    //   menu.classList.remove('site-header--small');
+    // } else {
+    //   menu.classList.add('site-header--small');
+    // }
+
 
   //grabing the site-header to change the background and apply some css rules
   var menuBackground = document.querySelector('.site-header');

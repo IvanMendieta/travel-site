@@ -37,7 +37,7 @@ window.addEventListener('scroll', stickyHeader);
         primaryFeatures.classList.remove('primary-nav--fontChange');
 
       }if( window.pageYOffset > 3000 ){
-        console.log(pageYOffset);
+        // console.log(pageYOffset);
         primaryTestimonials.classList.add('primary-nav--fontChange');
 
       }if(window.pageYOffset > 3186 || window.pageYOffset < 3000 ){

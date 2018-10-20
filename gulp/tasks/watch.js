@@ -37,6 +37,9 @@ gulp.task('watch', function(){
   watch('./app/assets/js/**/*.js', function(){
     gulp.start('scrollBtn');
   });
+  watch('./app/assets/js/**/*.js', function(){
+    gulp.start('modal');
+  });
 
 });
 
@@ -57,6 +60,11 @@ gulp.task('StickyHeaderDev', function(){
 
 gulp.task('scrollBtn', function(){
   return gulp.src('./app/assets/js/scrollBtn.js')
+    .pipe(browserSync.stream());
+});
+
+gulp.task('modal', function(){
+  return gulp.src('./app/assets/js/modal.js')
     .pipe(browserSync.stream());
 });
 
