@@ -1,4 +1,6 @@
-window.onscroll = function(){
+//function to show and hide the btn scroller
+window.onscroll = function(e){
+  e.preventDefault();
   var scrollBtn = document.querySelector('.scrollBtn-section');
 
     if( window.pageYOffset > 50 ){
