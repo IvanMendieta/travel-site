@@ -18,32 +18,20 @@ function stickyHeader(){
 //add an addEventListener to the stickyheader
 window.addEventListener('scroll', stickyHeader);
 
-  function menuLink(){
-      var primaryBeginning = document.querySelector('.beginning');
-      var primaryFeatures = document.querySelector('.features');
-      var primaryTestimonials = document.querySelector('.testimonials');
+  function menuLink(event){
+      var sections = document.querySelectorAll('.primary-nav a');
+      var scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 
-      //if the scrollier goes down to 192 change from ligth to dark style..
-      if( window.pageYOffset > 730 ){
-        primaryBeginning.classList.add('primary-nav--fontChange');
-
-      }if(window.pageYOffset > 2162 || window.pageYOffset < 730 ){
-        primaryBeginning.classList.remove('primary-nav--fontChange');
-
-      }if(window.pageYOffset > 2162 ){
-        primaryFeatures.classList.add('primary-nav--fontChange');
-
-      }if(window.pageYOffset > 3000 || window.pageYOffset < 2162  ){
-        primaryFeatures.classList.remove('primary-nav--fontChange');
-
-      }if( window.pageYOffset > 3000 ){
-        // console.log(pageYOffset);
-        primaryTestimonials.classList.add('primary-nav--fontChange');
-
-      }if(window.pageYOffset > 3186 || window.pageYOffset < 3000 ){
-        primaryTestimonials.classList.remove('primary-nav--fontChange');
+      for( var i = 0; i < sections.length; i++ ){
+        var currLink = sections[i];
+        var val = currLink.getAttribute('href');
+        var refElement = document.querySelector(val);
+          if( refElement.offsetTop <= scrollPos && ( refElement.offsetTop + refElement.offsetHeight > scrollPos )){
+            currLink.classList.add('primary-nav--fontChange');
+          }else{
+            currLink.classList.remove('primary-nav--fontChange');
+          }
       }
-
   };
   //add an addEventListener to the stickyheader
   window.addEventListener('scroll', menuLink);

@@ -1,4 +1,4 @@
-//testimonials scroll page
+//feature scroll page
 var featureItem = document.getElementsByClassName('feature-item');
   for( var i = 0; i < featureItem.length; i++ ){
       featureItem[i].classList.add('hide-items');
